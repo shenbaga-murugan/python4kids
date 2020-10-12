@@ -29,12 +29,20 @@ def list_entries():
 	else:
 		for name in phone_book:
 			print_entry(name)
+			
+def reverse_lookup(phone_no):
+	for name, phn_no in phone_book.items():
+		if phone_no == phn_no:
+			print_entry(name)
+			return
+	print("No entry for given number", phone_no)
 		
 def print_menu():
 	print("1. Add a new entry")
 	print("2. Lookup for an entry")
 	print("3. Delete an entry")
 	print("4. List all entries")
+	print("5. Reverse look up")
 	print("**Press any other key to exit**")
 	menu_opt = input("Enter your choice:")
 	handle_menu(menu_opt)
@@ -52,6 +60,9 @@ def handle_menu(menu_opt):
 		del_entry(name)
 	elif (menu_opt == "4"):
 		list_entries()
+	elif (menu_opt == "5"):
+		phone_no = input("Enter phone number to look up:")
+		reverse_lookup(phone_no)
 	else:
 		print("Exiting!")
 		return

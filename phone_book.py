@@ -59,9 +59,9 @@ def reverse_lookup(phone_no):
 	print("No entry for given number", phone_no)
 		
 def print_menu():
-	print("1. Add a new entry\t\t4. List all entries")
-	print("2. Lookup for an entry\t\t5. Reverse look up")
-	print("3. Delete an entry\t\t6. Load from file")
+	print("1. Add a new entry\t\t2. Lookup for an entry")
+	print("3. Delete an entry\t\t4. List all entries")
+	print("5. Reverse look up\t\t6. Load from file")
 	print("7. Save to file")
 	print("**Press any other key to exit**")
 	menu_opt = input("Enter your choice:")

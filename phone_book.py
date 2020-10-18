@@ -22,7 +22,7 @@ class PhoneBook:
 
 	def get_entry(self, name):
 		if name in self.phone_book.keys():
-			return self.phone_book[name]
+			return name + ": " + self.phone_book[name]
 		else:
 			return "No entry for given name " + name
 			

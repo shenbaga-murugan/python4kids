@@ -8,9 +8,8 @@ def encrypt_message(message, key):
 def decrypt_message(message, key):
 	decrypted_message = ""
 	for letter in message:
-		new_asci = (ord(letter) - (int(key) % 128))
-		print((new_asci, new_asci + 96) [32 > new_asci])
-		decrypted_message += chr((new_asci, new_asci + 96) [32 > new_asci])
+		new_asci = (ord(letter) - 32, ord(letter)) [64 < ord(letter)]
+		decrypted_message += chr(((new_asci - int(key)) % 128))
 	return decrypted_message
 
 print("1. Encrypt Message\n2. Decrypt Message")
